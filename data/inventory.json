@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "slug": "gibson-dg335-prototype-dave-grohl",
+      "title": "Gibson Custom Shop — Prototype DG 335 · Dave Grohl's Actual Guitar",
+      "shortTitle": "Gibson DG-335 Prototype",
+      "price": 300000,
+      "currency": "USD",
+      "year": "Prototype · circa 2005",
+      "origin": "Gibson Custom Shop, Nashville",
+      "vibe": "Investment · Tour-proven · One-of-one",
+      "category": "Featured guitar",
+      "blurb": "Dave Grohl's first DG-355 prototype: Pelham Blue, Trini Lopez-style f-holes, Firebird headstock—played on ESP&G and toured until production models shipped.",
+      "heroImage": "https://images.squarespace-cdn.com/content/v1/65d67a071daffc00565abd7f/1714765979244-K86UDFY3FLR4CTP4XKAX/IMG_6478.jpg?format=1500w",
+      "images": [
+        "https://images.squarespace-cdn.com/content/v1/65d67a071daffc00565abd7f/1714765979244-K86UDFY3FLR4CTP4XKAX/IMG_6478.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/65d67a071daffc00565abd7f/1714767084307-WVIGFQ3MIJTTK5K7L9JK/IMG_6480.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/65d67a071daffc00565abd7f/1714765802110-645VL0BX9PKSFPYL32YI/IMG_6482.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/65d67a071daffc00565abd7f/1714767458521-BBDK8U51ACSLS2H06HI5/IMG_6488.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/65d67a071daffc00565abd7f/1714766931384-LJMYDH39QVSX2R2HMJD4/IMG_6481.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/65d67a071daffc00565abd7f/1714765532384-U51LNBMVEOPSF1V603SO/IMG_6483.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/65d67a071daffc00565abd7f/1714770389056-AQ8TYHEI614VTNHN4AP5/IMG_20240503_140324.jpg?format=2500w"
+      ],
+      "page": "gibson-dg335-prototype-dave-grohl.html",
+      "sourceUrl": "https://www.skylightguitars.com/store/p/gibson-custom-shop-prototype-dg-335-dave-grohls-actual-guitar",
+      "featured": true
+    }
+  ]
+}

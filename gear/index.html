@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-inventory="../data/inventory.json">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Vault — Curated Inventory | Skylight Guitars · Bakersfield</title>
+    <meta
+      name="description"
+      content="Tour-grade guitars and rare pieces from Skylight Guitars. Year, origin, and vibe on every listing—Bakersfield's anti–big-box vault."
+    />
+    <meta name="theme-color" content="#120f0c" />
+    <link rel="canonical" href="https://www.skylightguitars.com/gear/" />
+    <link rel="icon" href="../skylineguitarslogo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Skylight Guitars — The Vault",
+        "description": "Curated guitar inventory with provenance-focused listings.",
+        "url": "https://www.skylightguitars.com/gear/",
+        "isPartOf": { "@type": "WebSite", "name": "Skylight Guitars", "url": "https://www.skylightguitars.com/" }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header is-scrolled">
+      <div class="wrap header-inner">
+        <a class="brand" href="../index.html">
+          <img src="../skylineguitarslogo.png" width="144" height="144" alt="Skylight Guitars — heritage seal" />
+          <span class="brand-text">
+            <strong>Skylight Guitars</strong>
+            <span>Bakersfield · The Vault</span>
+          </span>
+        </a>
+        <nav class="nav-main" aria-label="Primary">
+          <a href="../index.html#vault">The Vault</a>
+          <a href="../index.html#heavy-hitters">Stories</a>
+          <a href="index.html" aria-current="page">Inventory</a>
+          <a href="../luthier-guitar-repair-bakersfield.html">Repair</a>
+          <a href="../index.html#visit">Visit</a>
+        </nav>
+        <a class="btn btn--gold" href="https://www.skylightguitars.com/store" rel="noopener noreferrer">Shop</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="page-hero page-hero--vault wrap">
+        <p class="breadcrumb"><a href="../index.html">Home</a> · The Vault</p>
+        <h1>Curated floor</h1>
+        <p class="page-hero__lead">
+          Every piece gets a story: year, origin, vibe. This isn’t a spreadsheet—it’s a gallery. When you’re ready to
+          add more guitars, drop images and pricing into the project—we’ll wire new vault pages to match.
+        </p>
+      </header>
+
+      <section class="gear-section wrap" aria-labelledby="gear-heading">
+        <h2 id="gear-heading" class="visually-hidden">Current listings</h2>
+        <div id="gear-mount" class="gear-mount">
+          <p class="gear-loading">Opening the vault…</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer site-footer--rich">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <img src="../skylineguitarslogo.png" width="56" height="56" alt="" />
+          <div>
+            <strong>Skylight Guitars</strong><br />
+            1221 20th St · Bakersfield, CA<br />
+            <a href="tel:+16614321492">(661) 432-1492</a>
+          </div>
+        </div>
+        <div>
+          <a href="../vintage-gibson-les-paul-bakersfield.html">Vintage Gibson</a>
+          ·
+          <a href="../rare-fender-bakersfield.html">Rare Fender</a>
+          ·
+          <a href="../luthier-guitar-repair-bakersfield.html">Repair</a>
+        </div>
+        <div>© <span id="y"></span> Skylight Guitars</div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script src="../js/inventory-list.js" defer></script>
+    <script src="../js/main.js" defer></script>
+  </body>
+</html>
