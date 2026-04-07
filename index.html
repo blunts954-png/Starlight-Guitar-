@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-inventory="data/inventory.json">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,8 +18,8 @@
       content="Tour-grade vintage gear, estates, and consignments. The Bakersfield Sound lives here."
     />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content="https://www.skylightguitars.com/skylineguitarslogo.png" />
-    <meta name="twitter:image" content="https://www.skylightguitars.com/skylineguitarslogo.png" />
+    <meta property="og:image" content="https://www.skylightguitars.com/assets/hero-shop-interior.png" />
+    <meta name="twitter:image" content="https://www.skylightguitars.com/assets/hero-shop-interior.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Skylight Guitars | Bakersfield, CA" />
     <meta
@@ -33,6 +33,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preload" as="image" href="assets/hero-shop-interior.png" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -75,6 +76,32 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
+    <div
+      id="splash"
+      class="splash"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Skylight Guitars intro"
+      tabindex="-1"
+    >
+      <div class="splash__inner">
+        <div class="splash__waves" aria-hidden="true">
+          <span class="splash__bar"></span>
+          <span class="splash__bar"></span>
+          <span class="splash__bar"></span>
+          <span class="splash__bar"></span>
+          <span class="splash__bar"></span>
+          <span class="splash__bar"></span>
+          <span class="splash__bar"></span>
+        </div>
+        <img class="splash__logo" src="skylineguitarslogo.png" width="256" height="256" alt="Skylight Guitars" />
+        <div class="splash__string-wrap" aria-hidden="true">
+          <div class="splash__string"></div>
+        </div>
+        <p class="splash__hint">Click or tap · Enter the vault</p>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="wrap header-inner">
         <a class="brand" href="index.html">
@@ -98,29 +125,24 @@
     </header>
 
     <main id="main">
-      <section class="hero" aria-labelledby="hero-heading">
-        <div class="hero__media" aria-hidden="true"></div>
-        <div class="hero__figure" role="img" aria-label="Featured Gibson Custom Shop DG-335 prototype in Pelham Blue">
-          <a href="gear/gibson-dg335-prototype-dave-grohl.html" class="hero__figure-link">
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/65d67a071daffc00565abd7f/1714765979244-K86UDFY3FLR4CTP4XKAX/IMG_6478.jpg?format=1500w"
-              alt=""
-              width="520"
-              height="650"
-              fetchpriority="high"
-            />
-          </a>
-        </div>
+      <section class="hero hero--interior" aria-labelledby="hero-heading">
+        <div
+          class="hero__bg"
+          style="background-image: url('assets/hero-shop-interior.png')"
+          role="img"
+          aria-label="Interior of Skylight Guitars showroom in Bakersfield"
+        ></div>
+        <div class="hero__scrim" aria-hidden="true"></div>
         <div class="wrap hero__content">
           <p class="hero__kicker">Anti–big-box · Curated American iron</p>
           <h1 id="hero-heading">The Bakersfield Sound Lives Here.</h1>
           <p class="hero__lead">
-            Not a warehouse—a vault. Tour-grade vintage, rare consignments, and the stories baked into every
+            Not a warehouse—a vault. Real walls, real rugs, real amps: tour-grade gear and the stories in every
             neck and nut.
           </p>
           <div class="hero__actions">
             <a class="btn btn--gold" href="gear/index.html">Explore the vault</a>
-            <a class="btn btn--ghost" href="gear/gibson-dg335-prototype-dave-grohl.html">Featured listing</a>
+            <a class="btn btn--ghost" href="#heavy-hitters">Floor list</a>
           </div>
         </div>
       </section>
@@ -155,80 +177,14 @@
             Fair pricing grounded in real-world comps—not hype. Every piece is tagged with year, origin, and vibe
             so you know what you’re holding before you plug in.
           </p>
-          <div class="gallery-grid">
-            <article class="card-guitar card-guitar--vault">
-              <a class="card-guitar__link" href="gear/gibson-dg335-prototype-dave-grohl.html">
-                <div class="card-guitar__img">
-                  <img
-                    src="https://images.squarespace-cdn.com/content/v1/65d67a071daffc00565abd7f/1714765979244-K86UDFY3FLR4CTP4XKAX/IMG_6478.jpg?format=800w"
-                    alt=""
-                    loading="lazy"
-                    width="480"
-                    height="600"
-                  />
-                  <span class="card-guitar__shine" aria-hidden="true"></span>
-                </div>
-                <div class="card-guitar__body">
-                  <h3>Gibson DG-335 prototype · Dave Grohl</h3>
-                  <div class="tags">
-                    <span class="tag">~2005</span>
-                    <span class="tag">Nashville</span>
-                    <span class="tag">One-of-one</span>
-                  </div>
-                  <p class="card-guitar__price">$300,000</p>
-                  <p class="card-guitar__excerpt">Pelham Blue nitro, Trini Lopez f-holes, Firebird headstock—tour-used until production DG models landed.</p>
-                  <span class="card-guitar__cta">Open full listing →</span>
-                </div>
-              </a>
-            </article>
-            <article class="card-guitar">
-              <div class="card-guitar__img">Photo · headstock &amp; grain</div>
-              <div class="card-guitar__body">
-                <h3>Heritage electrics</h3>
-                <div class="tags">
-                  <span class="tag">Year</span>
-                  <span class="tag">Origin</span>
-                  <span class="tag">Vibe</span>
-                </div>
-                <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--muted)">
-                  Investment-grade Gibson &amp; golden-era Fender—vetted for soul and structure.
-                </p>
-                <p style="margin-top: 1rem">
-                  <a href="vintage-gibson-les-paul-bakersfield.html">Vintage Gibson →</a>
-                  &nbsp;
-                  <a href="rare-fender-bakersfield.html">Rare Fender →</a>
-                </p>
-              </div>
-            </article>
-            <article class="card-guitar">
-              <div class="card-guitar__img">Photo · amp face</div>
-              <div class="card-guitar__body">
-                <h3>Stage &amp; studio iron</h3>
-                <div class="tags">
-                  <span class="tag">Tour-ready</span>
-                  <span class="tag">USA / legacy</span>
-                  <span class="tag">Twang &amp; punch</span>
-                </div>
-                <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--muted)">
-                  Amps and pieces chosen for gig reliability and character—no disposable import filler.
-                </p>
-              </div>
-            </article>
-            <article class="card-guitar">
-              <div class="card-guitar__img">Photo · consignment row</div>
-              <div class="card-guitar__body">
-                <h3>Rare finds &amp; oddballs</h3>
-                <div class="tags">
-                  <span class="tag">Harmony era</span>
-                  <span class="tag">Garage rock</span>
-                  <span class="tag">Story</span>
-                </div>
-                <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--muted)">
-                  Rockets, student models that aged into icons—Americana with patina.
-                </p>
-              </div>
-            </article>
-          </div>
+          <div id="home-inventory-mount" class="home-inventory"></div>
+          <p class="section-intro" style="margin-top: 2rem; margin-bottom: 0">
+            <a href="gear/index.html">Full vault layout →</a>
+            &nbsp;·&nbsp;
+            <a href="vintage-gibson-les-paul-bakersfield.html">Vintage Gibson SEO</a>
+            &nbsp;·&nbsp;
+            <a href="rare-fender-bakersfield.html">Rare Fender SEO</a>
+          </p>
         </div>
       </section>
 
@@ -342,6 +298,10 @@
                   <strong>Hours</strong>
                   Mon–Sat · 10am–6pm
                 </li>
+                <li>
+                  <strong>Email</strong>
+                  <a href="mailto:skylightguitars@gmail.com">skylightguitars@gmail.com</a>
+                </li>
               </ul>
               <p style="color: var(--muted); font-size: 0.9rem; margin: 0 0 1rem">
                 Google Business Profile: refresh photos of the storefront and floor—30+ high-quality images signal
@@ -384,6 +344,8 @@
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
     </script>
+    <script src="js/splash.js" defer></script>
+    <script src="js/inventory-list.js" defer></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>

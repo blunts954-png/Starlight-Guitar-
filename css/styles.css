@@ -63,6 +63,186 @@ body > * {
   z-index: 1;
 }
 
+html.is-splash-active {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* —— Splash (logo + sound wave + string) —— */
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, #1f1a14 0%, #0a0908 55%, #050403 100%);
+  cursor: pointer;
+  transition: opacity 0.85s var(--ease), visibility 0.85s;
+}
+
+.splash[aria-hidden="true"] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 90vw;
+}
+
+.splash__logo {
+  width: min(200px, 42vw);
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid rgba(166, 138, 86, 0.45);
+  box-shadow:
+    0 0 60px rgba(196, 160, 53, 0.15),
+    inset 0 2px 6px rgba(255, 255, 255, 0.06);
+  animation: splashLogoIn 1.1s var(--ease) both;
+}
+
+@keyframes splashLogoIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.splash__waves {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 5px;
+  height: 56px;
+}
+
+.splash__bar {
+  width: 6px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--gold), var(--bronze));
+  transform-origin: bottom center;
+  animation: splashBar 0.55s ease-in-out infinite alternate;
+  opacity: 0.85;
+}
+
+.splash__bar:nth-child(1) {
+  animation-delay: 0s;
+  height: 18px;
+}
+.splash__bar:nth-child(2) {
+  animation-delay: 0.08s;
+  height: 36px;
+}
+.splash__bar:nth-child(3) {
+  animation-delay: 0.16s;
+  height: 52px;
+}
+.splash__bar:nth-child(4) {
+  animation-delay: 0.24s;
+  height: 44px;
+}
+.splash__bar:nth-child(5) {
+  animation-delay: 0.32s;
+  height: 28px;
+}
+.splash__bar:nth-child(6) {
+  animation-delay: 0.4s;
+  height: 40px;
+}
+.splash__bar:nth-child(7) {
+  animation-delay: 0.48s;
+  height: 22px;
+}
+
+@keyframes splashBar {
+  from {
+    transform: scaleY(0.35);
+    opacity: 0.45;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.splash__string-wrap {
+  width: min(320px, 80vw);
+  height: 24px;
+  position: relative;
+}
+
+.splash__string {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  margin-top: -1px;
+  background: linear-gradient(90deg, transparent, rgba(196, 160, 53, 0.25), var(--gold), rgba(196, 160, 53, 0.25), transparent);
+  border-radius: 2px;
+  animation: splashString 0.28s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(196, 160, 53, 0.35);
+}
+
+@keyframes splashString {
+  0%,
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+  25% {
+    transform: translateY(-2px) scaleY(1.15);
+  }
+  50% {
+    transform: translateY(1px) scaleY(0.92);
+  }
+  75% {
+    transform: translateY(-1px) scaleY(1.08);
+  }
+}
+
+.splash__hint {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+  animation: splashHint 2s ease infinite;
+}
+
+@keyframes splashHint {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash {
+    display: none !important;
+  }
+
+  .splash__bar,
+  .splash__string,
+  .splash__logo,
+  .splash__hint {
+    animation: none !important;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -269,6 +449,40 @@ a:hover {
   overflow: hidden;
 }
 
+.hero--interior {
+  align-items: end;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-color: #12100e;
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+}
+
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(10, 9, 8, 0.92) 0%,
+    rgba(10, 9, 8, 0.55) 38%,
+    rgba(10, 9, 8, 0.25) 55%,
+    rgba(10, 9, 8, 0.65) 100%
+  );
+  pointer-events: none;
+}
+
+.hero__scrim::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 70% 30%, transparent 30%, rgba(5, 4, 3, 0.5) 100%);
+  pointer-events: none;
+}
+
 .hero__media {
   position: absolute;
   inset: 0;
@@ -320,6 +534,12 @@ a:hover {
   vertical-align: middle;
 }
 
+.hero--interior .hero__content {
+  max-width: min(1120px, 92vw);
+  margin-inline: auto;
+  padding-bottom: 3rem;
+}
+
 .hero__content {
   position: relative;
   z-index: 2;
@@ -343,6 +563,16 @@ a:hover {
   letter-spacing: -0.02em;
   margin: 0 0 1.25rem;
   max-width: 14ch;
+}
+
+.hero--interior h1 {
+  text-shadow: 0 2px 32px rgba(0, 0, 0, 0.75);
+  max-width: 12ch;
+}
+
+.hero--interior .hero__kicker,
+.hero--interior .hero__lead {
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.85);
 }
 
 .hero__lead {
@@ -447,6 +677,11 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
+}
+
+.gallery-grid--dense {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
 }
 
 .card-guitar {
@@ -726,6 +961,26 @@ section {
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s var(--ease);
+}
+
+.card-guitar__ph {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #221c18, #0f0e0c);
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(166, 138, 86, 0.35);
+}
+
+.card-guitar--vault .card-guitar__img img[src$=".svg"] {
+  object-fit: contain;
+  padding: 1rem;
+  background: #120f0d;
 }
 
 .card-guitar--vault:hover .card-guitar__img img {
