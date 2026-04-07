@@ -1,6 +1,7 @@
 (function () {
+  var mountIds = ["gear-mount", "home-inventory-mount", "inventory-mount", "heavy-hitters-mount"];
   var mounts = [];
-  ["gear-mount", "home-inventory-mount"].forEach(function (id) {
+  mountIds.forEach(function (id) {
     var el = document.getElementById(id);
     if (el) mounts.push(el);
   });
@@ -53,6 +54,24 @@
   function firstVibeTag(vibe) {
     if (!vibe) return "";
     return (vibe.indexOf("·") >= 0 ? vibe.split("·")[0] : vibe).trim();
+  }
+
+  function filterItems(items, root) {
+    var out = items.slice();
+    var filter = root.getAttribute("data-filter") || "";
+    if (filter === "essential") {
+      out = out.filter(function (i) {
+        return i.essential === true;
+      });
+      out.sort(function (a, b) {
+        return (a.essentialRank || 999) - (b.essentialRank || 999);
+      });
+    }
+    var limit = parseInt(root.getAttribute("data-limit"), 10);
+    if (!isNaN(limit) && limit > 0) {
+      out = out.slice(0, limit);
+    }
+    return out;
   }
 
   function renderCard(it) {
@@ -113,7 +132,7 @@
   function renderInto(root, items) {
     if (!items.length) {
       root.innerHTML =
-        '<p class="gear-empty">No pieces in the vault yet. Visit the <a href="https://www.skylightguitars.com/store">Skylight store</a>.</p>';
+        '<p class="gear-empty">No pieces match this view. Visit the <a href="https://www.skylightguitars.com/store">Skylight store</a>.</p>';
       return;
     }
     root.innerHTML = '<div class="gallery-grid gallery-grid--dense">' + items.map(renderCard).join("") + "</div>";
@@ -122,7 +141,7 @@
   function run(data) {
     var items = data.items || [];
     mounts.forEach(function (root) {
-      renderInto(root, items);
+      renderInto(root, filterItems(items, root));
     });
   }
 
@@ -135,7 +154,7 @@
     .catch(function () {
       mounts.forEach(function (root) {
         root.innerHTML =
-          '<p class="gear-empty">Open over HTTP (e.g. <code>python -m http.server</code>) to load inventory, or visit the <a href="https://www.skylightguitars.com/store">live store</a>.</p>';
+          '<p class="gear-empty">Serve over HTTP to load inventory (e.g. <code>python -m http.server</code>) or visit the <a href="https://www.skylightguitars.com/store">live store</a>.</p>';
       });
     });
 })();

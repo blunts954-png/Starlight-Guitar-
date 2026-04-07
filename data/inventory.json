@@ -14,7 +14,9 @@
       "heroImage": "https://images.squarespace-cdn.com/content/v1/65d67a071daffc00565abd7f/1714765979244-K86UDFY3FLR4CTP4XKAX/IMG_6478.jpg?format=1500w",
       "page": "gear/gibson-dg335-prototype-dave-grohl.html",
       "externalUrl": "https://www.skylightguitars.com/store/p/gibson-custom-shop-prototype-dg-335-dave-grohls-actual-guitar",
-      "featured": true
+      "featured": true,
+      "essential": true,
+      "essentialRank": 1
     },
     {
       "slug": "gibson-les-paul-cm-2015",
@@ -56,7 +58,9 @@
       "blurb": "Appetite Burst finish—Slash Collection spec Les Paul for stage-ready humbucker punch.",
       "heroImage": "assets/placeholder-vault.svg",
       "page": null,
-      "externalUrl": "https://www.skylightguitars.com/store"
+      "externalUrl": "https://www.skylightguitars.com/store",
+      "essential": true,
+      "essentialRank": 2
     },
     {
       "slug": "fender-precision-bass-plus-frost-red",
@@ -70,7 +74,9 @@
       "blurb": "Frost red P-Bass Plus—precision thump with bold stage presence.",
       "heroImage": "assets/placeholder-vault.svg",
       "page": null,
-      "externalUrl": "https://www.skylightguitars.com/store"
+      "externalUrl": "https://www.skylightguitars.com/store",
+      "essential": true,
+      "essentialRank": 3
     },
     {
       "slug": "harmony-h54-1-rocket",
@@ -168,7 +174,9 @@
       "blurb": "Antique red thinline archtop—modern build with old-world archtop feel. Confirm current price in-store or on Reverb.",
       "heroImage": "assets/placeholder-vault.svg",
       "page": null,
-      "externalUrl": "https://www.skylightguitars.com/store"
+      "externalUrl": "https://www.skylightguitars.com/store",
+      "essential": true,
+      "essentialRank": 4
     }
   ]
 }

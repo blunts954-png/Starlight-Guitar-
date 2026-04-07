@@ -64,7 +64,7 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header is-scrolled">
+    <header class="site-header is-scrolled" id="site-header">
       <div class="wrap header-inner">
         <a class="brand" href="../index.html">
           <img src="../skylineguitarslogo.png" width="144" height="144" alt="Skylight Guitars" />
@@ -73,20 +73,31 @@
             <span>Bakersfield · The Vault</span>
           </span>
         </a>
-        <nav class="nav-main" aria-label="Primary">
-          <a href="../index.html">Home</a>
-          <a href="index.html">Inventory</a>
-          <a href="../luthier-guitar-repair-bakersfield.html">Repair</a>
-          <a href="../index.html#visit">Visit</a>
-        </nav>
-        <a class="btn btn--gold" href="https://www.skylightguitars.com/store/p/gibson-custom-shop-prototype-dg-335-dave-grohls-actual-guitar" rel="noopener noreferrer">Buy on store</a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <div id="nav-panel" class="nav-panel">
+          <nav class="nav-main" aria-label="Primary">
+            <a href="../index.html">Home</a>
+            <a href="../inventory.html">Inventory</a>
+            <a href="../heavy-hitters.html">Heavy Hitters</a>
+            <a href="../estates.html">Estates</a>
+            <a href="../repair.html">Repair</a>
+            <a href="../legends.html">Legends</a>
+            <a href="../reviews.html">Reviews</a>
+            <a href="../index.html#visit">Visit</a>
+          </nav>
+        </div>
+        <a class="btn btn--gold header-cta" href="https://www.skylightguitars.com/store/p/gibson-custom-shop-prototype-dg-335-dave-grohls-actual-guitar" rel="noopener noreferrer">Buy</a>
       </div>
     </header>
 
     <main id="main" class="product-page">
       <article class="wrap product-article">
         <p class="breadcrumb">
-          <a href="../index.html">Home</a> · <a href="index.html">The Vault</a> · Gibson
+          <a href="../index.html">Home</a> · <a href="../inventory.html">Inventory</a> · Gibson
         </p>
 
         <header class="product-header">
@@ -183,18 +194,45 @@
     </main>
 
     <footer class="site-footer site-footer--rich">
-      <div class="wrap footer-grid">
-        <div class="footer-brand">
-          <img src="../skylineguitarslogo.png" width="56" height="56" alt="" />
+      <div class="wrap">
+        <div class="footer-columns">
+          <div class="footer-brand">
+            <img src="../skylineguitarslogo.png" width="64" height="64" alt="" />
+            <div>
+              <strong style="color: var(--cream)">Skylight Guitars</strong>
+              <p style="margin: 0.35rem 0 0; color: var(--muted); font-size: 0.9rem">1221 20th St · Bakersfield, CA</p>
+            </div>
+          </div>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="../inventory.html">Inventory</a>
+            <a href="../heavy-hitters.html">Heavy Hitters</a>
+            <a href="../estates.html">Estates</a>
+            <a href="../repair.html">Repair</a>
+            <a href="../legends.html">Legends</a>
+            <a href="../reviews.html">Reviews</a>
+            <a href="../index.html#visit">Visit</a>
+          </nav>
           <div>
-            <strong>Skylight Guitars</strong><br />
-            <a href="tel:+16614321492">(661) 432-1492</a>
+            <p style="margin: 0; font-size: 0.88rem">
+              <a href="tel:+16614321492">(661) 432-1492</a><br />
+              <a href="mailto:skylightguitars@gmail.com">skylightguitars@gmail.com</a>
+            </p>
           </div>
         </div>
-        <div><a href="index.html">← All vault listings</a></div>
+        <p class="footer-social" style="margin: 1.25rem 0 0; text-align: center; font-size: 0.88rem">
+          <a href="https://www.facebook.com/61554216925890/" rel="noopener noreferrer">Facebook</a>
+          <span aria-hidden="true"> · </span>
+          <a href="https://www.instagram.com/skylightguitars/" rel="noopener noreferrer">Instagram</a>
+          <span aria-hidden="true"> · </span>
+          <a href="https://www.google.com/maps/search/?api=1&query=Skylight+Guitars+1221+20th+St+Bakersfield+CA+93301" rel="noopener noreferrer">Google Maps</a>
+        </p>
+        <p style="margin: 0; text-align: center; color: var(--muted); font-size: 0.82rem">© <span id="y"></span> Skylight Guitars</p>
       </div>
     </footer>
 
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
     <script>
       (function () {
         var root = document.querySelector("[data-gallery]");

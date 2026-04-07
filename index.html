@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" data-inventory="data/inventory.json">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Skylight Guitars | The Bakersfield Authority on Vintage &amp; Rare Gear</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#120f0c" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="geo.region" content="US-CA" />
+    <meta name="geo.placename" content="Bakersfield" />
+    <meta name="geo.position" content="35.3733;-119.0187" />
+    <meta name="ICBM" content="35.3733, -119.0187" />
+    <title>Skylight Guitars | Vintage &amp; Rare Gear · Bakersfield, CA</title>
     <meta
       name="description"
-      content="Stop buying plastic. Skylight Guitars specializes in tour-grade vintage Gibson, Fender, and Harmony estates. Authentic gear for serious artists. Located in the heart of Bakersfield, CA."
+      content="Skylight Guitars in Bakersfield, CA: tour-grade vintage Gibson, Fender, and Harmony—estates, consignments, and master repair. The Bakersfield Sound lives here. 1221 20th St."
     />
-    <meta name="theme-color" content="#120f0c" />
     <link rel="canonical" href="https://www.skylightguitars.com/" />
     <link rel="icon" href="skylineguitarslogo.png" type="image/png" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Skylight Guitars | Vintage &amp; Rare Gear | Bakersfield, CA" />
+    <meta property="og:title" content="Skylight Guitars | Bakersfield Vintage &amp; Rare Gear" />
     <meta
       property="og:description"
-      content="Tour-grade vintage gear, estates, and consignments. The Bakersfield Sound lives here."
+      content="Anti–big-box guitar shop: curated American iron, estates, and luthier repair at 1221 20th St, Bakersfield CA."
     />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="https://www.skylightguitars.com/assets/hero-shop-interior.png" />
-    <meta name="twitter:image" content="https://www.skylightguitars.com/assets/hero-shop-interior.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Skylight Guitars | Bakersfield, CA" />
-    <meta
-      name="twitter:description"
-      content="Curators of the gear that built the Sound. Iron and wood—no plastic."
-    />
+    <meta name="twitter:image" content="https://www.skylightguitars.com/assets/hero-shop-interior.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,11 +38,16 @@
       {
         "@context": "https://schema.org",
         "@type": "MusicStore",
+        "@id": "https://www.skylightguitars.com/#musicstore",
         "name": "Skylight Guitars",
-        "description": "Vintage and tour-grade guitars, amplifiers, and estates. American-made and curated used inventory in Bakersfield, California.",
+        "description": "Vintage and tour-grade guitars, amplifiers, estates, and luthier services in Bakersfield, California.",
         "url": "https://www.skylightguitars.com/",
         "telephone": "+1-661-432-1492",
-        "image": "https://www.skylightguitars.com/skylineguitarslogo.png",
+        "email": "skylightguitars@gmail.com",
+        "image": [
+          "https://www.skylightguitars.com/skylineguitarslogo.png",
+          "https://www.skylightguitars.com/assets/hero-shop-interior.png"
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1221 20th St",
@@ -51,15 +56,8 @@
           "postalCode": "93301",
           "addressCountry": "US"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 35.3733,
-          "longitude": -119.0187
-        },
-        "areaServed": {
-          "@type": "AdministrativeArea",
-          "name": "Kern County"
-        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 35.3733, "longitude": -119.0187 },
+        "areaServed": { "@type": "AdministrativeArea", "name": "Kern County" },
         "priceRange": "$$$",
         "openingHoursSpecification": [
           {
@@ -69,7 +67,26 @@
             "closes": "18:00"
           }
         ],
-        "sameAs": []
+        "sameAs": [
+          "https://www.skylightguitars.com/store",
+          "https://www.facebook.com/61554216925890/",
+          "https://www.instagram.com/skylightguitars/",
+          "https://www.google.com/maps/search/?api=1&query=Skylight+Guitars+1221+20th+St+Bakersfield+CA+93301"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Skylight Guitars",
+        "url": "https://www.skylightguitars.com/",
+        "publisher": { "@id": "https://www.skylightguitars.com/#musicstore" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.skylightguitars.com/inventory.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       }
     </script>
   </head>
@@ -102,25 +119,40 @@
       </div>
     </div>
 
-    <header class="site-header">
+    <header class="site-header" id="site-header">
       <div class="wrap header-inner">
         <a class="brand" href="index.html">
-          <img src="skylineguitarslogo.png" width="144" height="144" alt="Skylight Guitars — Bakersfield heritage stamp logo" />
+          <img src="skylineguitarslogo.png" width="144" height="144" alt="Skylight Guitars — Bakersfield heritage seal logo" />
           <span class="brand-text">
             <strong>Skylight Guitars</strong>
             <span>Bakersfield · Iron &amp; Wood</span>
           </span>
         </a>
-        <nav class="nav-main" aria-label="Primary">
-          <a href="#vault">The Vault</a>
-          <a href="gear/index.html">Inventory</a>
-          <a href="#heavy-hitters">Heavy Hitters</a>
-          <a href="#estates">Estates</a>
-          <a href="luthier-guitar-repair-bakersfield.html">Repair</a>
-          <a href="#legends">Legends</a>
-          <a href="#visit">Visit</a>
-        </nav>
-        <a class="btn btn--gold" href="gear/index.html">The Vault</a>
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-panel"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <div id="nav-panel" class="nav-panel">
+          <nav class="nav-main" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="heavy-hitters.html">Heavy Hitters</a>
+            <a href="estates.html">Estates</a>
+            <a href="repair.html">Repair</a>
+            <a href="legends.html">Legends</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="index.html#visit">Visit</a>
+          </nav>
+        </div>
+        <a class="btn btn--gold header-cta" href="inventory.html">Inventory</a>
       </div>
     </header>
 
@@ -137,12 +169,12 @@
           <p class="hero__kicker">Anti–big-box · Curated American iron</p>
           <h1 id="hero-heading">The Bakersfield Sound Lives Here.</h1>
           <p class="hero__lead">
-            Not a warehouse—a vault. Real walls, real rugs, real amps: tour-grade gear and the stories in every
-            neck and nut.
+            Not a warehouse—a vault. Real walls, real rugs, real amps: tour-grade gear and the stories in every neck
+            and nut.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--gold" href="gear/index.html">Explore the vault</a>
-            <a class="btn btn--ghost" href="#heavy-hitters">Floor list</a>
+            <a class="btn btn--gold" href="inventory.html">Explore inventory</a>
+            <a class="btn btn--ghost" href="heavy-hitters.html">Heavy Hitters</a>
           </div>
         </div>
       </section>
@@ -154,121 +186,56 @@
           <blockquote>Iron and wood. Soul over SKU.</blockquote>
           <div class="body-copy">
             <p>
-              At Skylight Guitars, we aren’t interested in the mass-produced inventory you’ll find at corporate
-              big-box stores. We deal in iron and wood—quality American-made, used, and vintage gear chosen for
-              tone and integrity, not for turnover.
+              At Skylight Guitars, we aren’t interested in mass-produced inventory from corporate big-box stores. We
+              deal in iron and wood—quality American-made, used, and vintage gear chosen for tone and integrity.
             </p>
             <p>
-              Based in the heart of Bakersfield, we curate the gear that helped build the Sound. Whether it’s an
-              estate collection of pre-war acoustics or tour-grade equipment that’s seen more miles than a
-              Greyhound bus, we only move instruments with a story worth telling.
+              Based in the heart of Bakersfield, we curate the gear that helped build the Sound—estates, rare
+              consignments, and tour-grade pieces with a story.
             </p>
-            <p>We’re gearheads. We’re history nerds. We’re here so the next generation plays something worth keeping.</p>
           </div>
           <p class="tagline-end">Skylight Guitars · Authenticity uncompromised</p>
         </div>
       </section>
 
-      <section id="heavy-hitters" class="heavy-hitters">
+      <section class="heavy-hitters" aria-labelledby="explore-heading">
         <div class="wrap">
-          <p class="section-label">Inventory</p>
-          <h2 class="section-title">The Heavy Hitters: tour-grade gear only</h2>
+          <p class="section-label">Explore</p>
+          <h2 id="explore-heading" class="section-title">Step into the vault</h2>
           <p class="section-intro">
-            Fair pricing grounded in real-world comps—not hype. Every piece is tagged with year, origin, and vibe
-            so you know what you’re holding before you plug in.
+            Every section of the site is built like a room in the shop—deep pages for inventory, estates, repair,
+            legends, and reviews. Your header and footer stay with you everywhere.
           </p>
-          <div id="home-inventory-mount" class="home-inventory"></div>
-          <p class="section-intro" style="margin-top: 2rem; margin-bottom: 0">
-            <a href="gear/index.html">Full vault layout →</a>
-            &nbsp;·&nbsp;
-            <a href="vintage-gibson-les-paul-bakersfield.html">Vintage Gibson SEO</a>
-            &nbsp;·&nbsp;
-            <a href="rare-fender-bakersfield.html">Rare Fender SEO</a>
-          </p>
-        </div>
-      </section>
-
-      <section id="inventory" class="inventory-cta" style="padding-top: 0">
-        <div class="wrap">
-          <div class="panel inventory-panel">
-            <div>
-              <p class="section-label" style="margin-bottom: 0.5rem">Live feed</p>
-              <h2 class="section-title" style="margin-bottom: 0.5rem">Seamless inventory</h2>
-              <p style="margin: 0; color: var(--muted); max-width: 42ch">
-                The Skylight storefront and Reverb feed stay in sync—see what’s on the wall with real-world pricing.
-              </p>
-            </div>
-            <div class="inventory-panel__actions">
-              <a class="btn btn--gold" href="https://www.skylightguitars.com/store" rel="noopener noreferrer">Skylight store</a>
-              <a class="btn btn--ghost" href="gear/index.html">The Vault (this site)</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="estates" class="estates">
-        <div class="wrap">
-          <p class="section-label">Private</p>
-          <h2 class="section-title">Estates &amp; consignments</h2>
-          <p class="section-intro">
-            We wanna buy all your daddy’s old guitars—and treat collections with the discretion of a high-trust
-            auction house. Estates, tour dispersals, and one-of-one consignments: by appointment, straight talk,
-            fair numbers.
-          </p>
-          <div class="estates-grid">
-            <div class="estate-card">
-              <h3>Estate buyouts</h3>
-              <p style="margin: 0; color: var(--muted)">
-                Full collections appraised with respect for provenance. We move serious iron—pre-war acoustics,
-                Nashville stacks, road-warrior racks.
-              </p>
-            </div>
-            <div class="estate-card">
-              <h3>Consignment</h3>
-              <p style="margin: 0; color: var(--muted)">
-                Select consignments for pieces that belong in the hands of players who get it. Presentation,
-                photography, and pricing aligned with live market data.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="repair" id="repair">
-        <div class="wrap">
-          <p class="section-label">The bench</p>
-          <h2 class="section-title">We resurrect legends</h2>
-          <div class="panel">
-            <p style="margin-top: 0; color: var(--muted)">
-              Your daddy’s guitar deserves better than a mall setup. Our bench is for players who know an
-              instrument is a living thing—from vintage neck resets to tour-grade wiring and fretwork that stays
-              true under stage lights.
-            </p>
-            <a class="btn btn--gold" href="luthier-guitar-repair-bakersfield.html">Luthier services &amp; repair →</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="legends" class="legends">
-        <div class="wrap">
-          <p class="section-label">Content</p>
-          <h2 class="section-title">Bakersfield Legends</h2>
-          <p class="section-intro">
-            Short, authority-forward deep dives on the gear behind the Bakersfield Sound—built for collectors and
-            search intent around heritage, not generic “guitar shop” filler.
-          </p>
-          <div class="legends-grid">
-            <article class="legend-card">
-              <h3>Twang &amp; steel DNA</h3>
-              <p>The Fender spine of California country—amps, Teles, and the session rigs that defined a region.</p>
+          <div class="teaser-grid">
+            <article class="teaser-card">
+              <h3>Inventory</h3>
+              <p>Full floor list with year, origin, vibe, and pricing hooks—synced mindset with the Reverb feed.</p>
+              <a class="btn btn--ghost" href="inventory.html">Open inventory →</a>
             </article>
-            <article class="legend-card">
-              <h3>Buckaroo lineage</h3>
-              <p>How stage wear and honest mods tell you more than a catalog spec sheet ever could.</p>
+            <article class="teaser-card">
+              <h3>Heavy Hitters</h3>
+              <p>Four essential pieces we spotlight for collectors and serious players—updated from live data.</p>
+              <a class="btn btn--ghost" href="heavy-hitters.html">Top four →</a>
             </article>
-            <article class="legend-card">
-              <h3>Next in the series</h3>
-              <p>Placeholder for long-form posts: target “Bakersfield Sound heritage gear” and repair intent in 93301.</p>
+            <article class="teaser-card">
+              <h3>Estates</h3>
+              <p>Buyouts, consignments, and how we handle collections with auction-house discretion.</p>
+              <a class="btn btn--ghost" href="estates.html">Estates &amp; consignments →</a>
+            </article>
+            <article class="teaser-card">
+              <h3>Repair</h3>
+              <p>Electric and acoustic benches—neck resets, fretwork, electronics, and tour-grade setups.</p>
+              <a class="btn btn--ghost" href="repair.html">Luthier services →</a>
+            </article>
+            <article class="teaser-card">
+              <h3>Legends</h3>
+              <p>Bakersfield Sound heritage: twang, steel, and the gear behind Central California country.</p>
+              <a class="btn btn--ghost" href="legends.html">Bakersfield Legends →</a>
+            </article>
+            <article class="teaser-card">
+              <h3>Reviews</h3>
+              <p>What players say on Google—and how we earn trust for vintage repair and curation in 93301.</p>
+              <a class="btn btn--ghost" href="reviews.html">Reviews →</a>
             </article>
           </div>
         </div>
@@ -279,8 +246,8 @@
           <p class="section-label">Local</p>
           <h2 class="section-title">Visit the vault</h2>
           <p class="section-intro">
-            Same name, address, and phone everywhere—site, Google Business Profile, Yelp, and socials—so local
-            search trusts the signal.
+            Consistent name, address, and phone everywhere—this site, Google Business Profile, Yelp, and socials—so
+            local search (SEO, GEO) trusts your signal.
           </p>
           <div class="visit-grid">
             <div>
@@ -303,11 +270,12 @@
                   <a href="mailto:skylightguitars@gmail.com">skylightguitars@gmail.com</a>
                 </li>
               </ul>
-              <p style="color: var(--muted); font-size: 0.9rem; margin: 0 0 1rem">
-                Google Business Profile: refresh photos of the storefront and floor—30+ high-quality images signal
-                “proof of life” to local algorithms.
-              </p>
-              <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=1221+20th+St+Bakersfield+CA+93301" rel="noopener noreferrer">Directions in Google Maps</a>
+              <a
+                class="btn btn--ghost"
+                href="https://www.google.com/maps/search/?api=1&query=Skylight+Guitars+1221+20th+St+Bakersfield+CA+93301"
+                rel="noopener noreferrer"
+                >Directions in Google Maps</a
+              >
             </div>
             <div class="map-embed">
               <iframe
@@ -322,22 +290,56 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="wrap footer-grid">
-        <div>
-          <strong style="color: var(--cream)">Skylight Guitars</strong><br />
-          Bakersfield, California · Vintage &amp; tour-grade gear
+    <footer class="site-footer site-footer--rich">
+      <div class="wrap">
+        <div class="footer-columns">
+          <div class="footer-brand">
+            <img src="skylineguitarslogo.png" width="64" height="64" alt="" />
+            <div>
+              <strong style="color: var(--cream)">Skylight Guitars</strong>
+              <p style="margin: 0.35rem 0 0; color: var(--muted); font-size: 0.9rem">
+                Bakersfield, CA · Vintage &amp; tour-grade gear
+              </p>
+            </div>
+          </div>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="inventory.html">Inventory</a>
+            <a href="heavy-hitters.html">Heavy Hitters</a>
+            <a href="estates.html">Estates</a>
+            <a href="repair.html">Repair</a>
+            <a href="legends.html">Legends</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="vintage-gibson-les-paul-bakersfield.html">Vintage Gibson</a>
+            <a href="rare-fender-bakersfield.html">Rare Fender</a>
+            <a href="index.html#visit">Visit</a>
+          </nav>
+          <div>
+            <p style="margin: 0 0 0.5rem; color: var(--muted); font-size: 0.85rem">
+              <strong style="color: var(--cream)">Hours</strong><br />
+              Mon–Sat · 10am–6pm
+            </p>
+            <p style="margin: 0; font-size: 0.88rem">
+              <a href="tel:+16614321492">(661) 432-1492</a><br />
+              <a href="mailto:skylightguitars@gmail.com">skylightguitars@gmail.com</a>
+            </p>
+            <p style="margin: 0.75rem 0 0; color: var(--muted); font-size: 0.85rem">1221 20th St · Bakersfield, CA 93301</p>
+            <p class="footer-social" style="margin: 1rem 0 0; font-size: 0.88rem">
+              <a href="https://www.facebook.com/61554216925890/" rel="noopener noreferrer">Facebook</a>
+              <span aria-hidden="true"> · </span>
+              <a href="https://www.instagram.com/skylightguitars/" rel="noopener noreferrer">Instagram</a>
+              <span aria-hidden="true"> · </span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Skylight+Guitars+1221+20th+St+Bakersfield+CA+93301"
+                rel="noopener noreferrer"
+                >Google Maps</a
+              >
+            </p>
+          </div>
         </div>
-        <div>
-          <a href="gear/index.html">The Vault</a>
-          ·
-          <a href="vintage-gibson-les-paul-bakersfield.html">Vintage Gibson</a>
-          ·
-          <a href="rare-fender-bakersfield.html">Rare Fender</a>
-          ·
-          <a href="luthier-guitar-repair-bakersfield.html">Repair</a>
-        </div>
-        <div>© <span id="y"></span> Skylight Guitars. All rights reserved.</div>
+        <p style="margin: 0; text-align: center; color: var(--muted); font-size: 0.82rem">
+          © <span id="y"></span> Skylight Guitars ·
+          <a href="https://www.skylightguitars.com/store">Online store</a>
+        </p>
       </div>
     </footer>
 
@@ -345,7 +347,6 @@
       document.getElementById("y").textContent = new Date().getFullYear();
     </script>
     <script src="js/splash.js" defer></script>
-    <script src="js/inventory-list.js" defer></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>
