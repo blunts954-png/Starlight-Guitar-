@@ -25,14 +25,14 @@
     <meta property="og:site_name" content="Skylight Guitars" />
     <meta property="og:url" content="https://www.skylightguitars.com/" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content="https://www.skylightguitars.com/assets/hero-shop-interior.png" />
+    <meta property="og:image" content="https://www.skylightguitars.com/assets/hero-shop-interior.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Skylight Guitars | Bakersfield Vintage &amp; Rare Gear" />
     <meta
       name="twitter:description"
       content="Anti–big-box guitar shop: curated American iron, estates, and luthier repair at 1221 20th St, Bakersfield CA."
     />
-    <meta name="twitter:image" content="https://www.skylightguitars.com/assets/hero-shop-interior.png" />
+    <meta name="twitter:image" content="https://www.skylightguitars.com/assets/hero-shop-interior.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,7 +40,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preload" as="image" href="assets/hero-shop-interior.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/hero-shop-interior.webp" type="image/webp" fetchpriority="high" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -52,8 +52,8 @@
         "telephone": "+1-661-432-1492",
         "email": "skylightguitars@gmail.com",
         "image": [
-          "https://www.skylightguitars.com/skylightlogo.png",
-          "https://www.skylightguitars.com/assets/hero-shop-interior.png"
+          "https://www.skylightguitars.com/skylightlogo.webp",
+          "https://www.skylightguitars.com/assets/hero-shop-interior.webp"
         ],
         "address": {
           "@type": "PostalAddress",
@@ -123,7 +123,10 @@
       <div class="splash__inner">
         <div class="splash__atv" aria-hidden="true">
           <div class="splash__atv-screen">
-            <img class="splash__logo" src="skylightlogo.png" width="1024" height="512" alt="" />
+            <picture>
+              <source type="image/webp" srcset="skylightlogo.webp" />
+              <img class="splash__logo" src="skylightlogo.png" width="2892" height="1440" alt="" />
+            </picture>
           </div>
           <div class="splash__atv-base"></div>
         </div>
@@ -134,7 +137,10 @@
     <header class="site-header" id="site-header">
       <div class="wrap header-inner">
         <a class="brand" href="index.html">
-          <img src="skylightlogo.png" width="144" height="144" alt="Skylight Guitars logo" />
+          <picture>
+            <source type="image/webp" srcset="skylightlogo.webp" />
+            <img src="skylightlogo.png" width="2892" height="1440" alt="Skylight Guitars logo" />
+          </picture>
           <span class="brand-text">
             <strong>Skylight Guitars</strong>
             <span>Bakersfield · Vintage &amp; Rare</span>
@@ -170,12 +176,20 @@
 
     <main id="main">
       <section class="hero hero--interior" aria-labelledby="hero-heading">
-        <div
-          class="hero__bg"
-          style="background-image: url('assets/hero-shop-interior.png')"
-          role="img"
-          aria-label="Interior of Skylight Guitars showroom in Bakersfield"
-        ></div>
+        <div class="hero__bg" role="img" aria-label="Interior of Skylight Guitars showroom in Bakersfield">
+          <picture>
+            <source type="image/webp" srcset="assets/hero-shop-interior.webp" />
+            <img
+              class="hero__bg-img"
+              src="assets/hero-shop-interior.png"
+              width="796"
+              height="545"
+              alt=""
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
+        </div>
         <div class="hero__scrim" aria-hidden="true"></div>
         <div class="wrap hero__content">
           <p class="hero__kicker">Anti–big-box · Curated American iron</p>
